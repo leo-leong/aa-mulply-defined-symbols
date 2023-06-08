@@ -1,5 +1,9 @@
 LIBRARY	Dll1
 
+;https://developercommunity.visualstudio.com/t/Different-entry-name-not-supported-in-Mo/10360313
+;Per documentation, DATA keyword should be optional to indicate data variable instead of function
+;https://learn.microsoft.com/en-us/cpp/build/reference/exports?view=msvc-170
+;Workaround for multiply defined symbols found
 EXPORTS
-    user_ibsta                       @1
-    user_iberr                       @2
+    user_ibsta                       @1     DATA
+    user_iberr                       @2     DATA
